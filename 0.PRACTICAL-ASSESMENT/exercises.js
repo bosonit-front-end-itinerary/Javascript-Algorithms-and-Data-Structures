@@ -117,6 +117,19 @@ console.log(objTransformed);
 
 
 //exercise 10
+//Crea una función que elimine las etiquetas html o xml de un string.
+//La función debe tener un string como único parámetro.
+
+function removingHtmlXmlTags(str){
+    return str.replace(/<[^>]*>/g, '');
+}
+
+let tags = '<div><span>lorem</span> <strong>ipsum</strong></div>'
+console.log(tags);
+
+let result = removingHtmlXmlTags(tags)
+console.log(result)
+
 
 //exercise 11
 //Crea una función que tome un array como parametro y lo divida en arrays nuevos con tantos elementos como sean especificados.
