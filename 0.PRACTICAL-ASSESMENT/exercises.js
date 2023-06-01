@@ -1,19 +1,17 @@
 //exercise 1
 //Dado un array de objetos, obtener el objeto con el id 3
 
-function getId() {
-    const arrNames = [
-        {id: 1, name: 'Pepe'},
-        {id: 2, name: 'Juan'},
-        {id: 3, name: 'Alba'},
-        {id: 4, name: 'Toby'},
-        {id: 5, name: 'Lala'}
-    ]
+const arrNames = [
+    {id: 1, name: 'Pepe'},
+    {id: 2, name: 'Juan'},
+    {id: 3, name: 'Alba'},
+    {id: 4, name: 'Toby'},
+    {id: 5, name: 'Lala'}
+]
 
-    const chosenId = arrNames.filter(elem => elem.id === 3)
-    return chosenId;
-}
-console.log(getId());
+const chosenId = arrNames.filter(elem => elem.id === 3)
+
+console.log(chosenId);
 
 //..................................................
 
@@ -21,14 +19,11 @@ console.log(getId());
 //Dado un array de valores, devolver un array truthy (sin valores nulos, vacíos, no números, indefinidos o falsos)
     /*filter calls a function on each element of an array and returns a new array containing only the elements for which that function returns a truthy value - that is, a value which returns true if passed to the Boolean() constructor. In other words, it filters the array, based on the function passed to it. Like map, it does this without needing to modify the original array.*/
 
-function cleaningTheMessyCode() {
     const arrDirty = [NaN, 0, 5, false, -1, '',undefined, 3, null, 'test'];
 
-    let positiveNums = arrDirty;
-    const truthyValues = arrDirty.filter(positiveNums > 0)
-    return truthyValues
-}
-console.log(cleaningTheMessyCode());
+    const truthyValues = arrDirty.filter(num => !!num)
+    
+    console.log(truthyValues);
 
 //..................................................
 
@@ -134,6 +129,7 @@ console.log(findingTheFalsy()); //{ b: '2', d: true, e: null }
 //..................................................
 
 //exercise 8
+
 
 //..................................................
 
